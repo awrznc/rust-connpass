@@ -1,0 +1,9 @@
+[package]
+name = "connpass"
+version = "0.0.1"
+authors = ["awrznc"]
+edition = "2018"
+license = "MIT"
+description = "Connpass API library in Rust."
+
+[dependencies]
