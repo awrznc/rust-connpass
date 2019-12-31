@@ -1,0 +1,7 @@
+[package]
+name = "connpass"
+version = "0.0.1"
+authors = ["awrznc"]
+edition = "2018"
+
+[dependencies]
