@@ -6,7 +6,7 @@
 
 # Install
 
-```
+```bash
 # Ubuntu, Alpine 
 apt-get install libssl-dev pkg-config
 
@@ -22,8 +22,8 @@ yum install openssl-devel
 
 # Example
 
-```
-$ cargo run --example get
+```bash
+cargo run --example get
 ```
 
 # Contribute
