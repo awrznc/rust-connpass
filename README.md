@@ -4,7 +4,9 @@
 
 [Connpass API](https://connpass.com/about/api/) library in Rust.
 
-# Install
+## Install
+
+Install openssl through your favourite package. You might also need a C compiler (gcc).
 
 ```bash
 # Ubuntu, Alpine 
@@ -20,16 +22,23 @@ dnf install openssl-devel
 yum install openssl-devel
 ```
 
-# Example
+Put the following in your project's Cargo.toml file:
+
+```toml
+[dependencies]
+connpass = "0.0.1"
+```
+
+## Example
 
 ```bash
 cargo run --example get
 ```
 
-# Contribute
+## Contribute
 
 Any PR is welcomed!
 
-# License
+## License
 
 https://github.com/awrznc/rust-connpass/blob/master/LICENSE
