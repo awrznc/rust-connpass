@@ -1,0 +1,13 @@
+[package]
+name = "connpass"
+version = "0.0.1"
+authors = ["awrznc"]
+edition = "2018"
+license = "MIT"
+description = "Connpass API library in Rust."
+
+[dependencies]
+reqwest = { version = "0.10", features = ["blocking"] }
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
