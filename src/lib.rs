@@ -1,3 +1,7 @@
+//! # rust-connpass
+//!
+//! [Connpass API](https://connpass.com/about/api/) library in Rust.
+
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;

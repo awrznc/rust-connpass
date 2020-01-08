@@ -51,8 +51,6 @@ pub struct Series {
     pub url: String
 }
 
-
-// use serde::Deserialize;
 use std::error::Error;
 
 #[cfg(test)]
@@ -102,7 +100,7 @@ fn get_response(uri: &str, head: &str) -> Result<Response, Box<dyn Error>> {
     Ok(response)
 }
 
-
+/// Initialize event instance.
 pub fn new() -> Request {
     Request::new()
 }
