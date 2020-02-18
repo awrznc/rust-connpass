@@ -7,4 +7,3 @@ fn main() {
     // print result
     println!("{:#?}", response);
 }
-
