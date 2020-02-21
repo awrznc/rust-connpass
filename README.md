@@ -4,7 +4,9 @@
 
 [Connpass API](https://connpass.com/about/api/) library in Rust.
 
-# Install
+## Install
+
+Install openssl through your favourite package. You might also need a C compiler (gcc).
 
 ```bash
 # Ubuntu, Alpine 
@@ -20,16 +22,48 @@ dnf install openssl-devel
 yum install openssl-devel
 ```
 
-# Example
+## Get Started
+
+Put the following in your project's Cargo.toml file:
+
+```toml
+[dependencies]
+connpass = "0.1.0"
+```
+
+And overwrite in your project's main.rs file:
+
+```rust
+use connpass;
+
+fn main() {
+    // Declare query params
+    let mut query_params = [("keyword", "Rust")];
+
+    // Get event information
+    let response = connpass::event::new().query(&mut query_params).get().expect("request error.");
+
+    // Print event information
+    let event = &response.body.unwrap().events[0];
+    println!("event title ... {}", event.title);
+    
+    // output example:
+    // event title ... Rust入門者向けハンズオン 
+}
+```
+
+The event title is outputted when run build on the console.
+
+## Example
 
 ```bash
 cargo run --example get
 ```
 
-# Contribute
+## Contribute
 
 Any PR is welcomed!
 
-# License
+## License
 
 https://github.com/awrznc/rust-connpass/blob/master/LICENSE

@@ -78,7 +78,7 @@ fn read_file<P: AsRef<Path>>(path: P) -> Result<Response, Box<dyn Error>> {
 
 
 #[cfg(not(test))]
-fn get_response(uri: &str, head: &str) -> Result<Response, Box<dyn Error>> {
+fn http_request(uri: &str, head: &str) -> Result<Response, Box<dyn Error>> {
     let url = reqwest::Url::parse(uri).unwrap();
 
     let client = reqwest::blocking::Client::builder()
@@ -120,7 +120,7 @@ impl Request {
         let response = read_file("./mock/200.json")?;
 
         #[cfg(not(test))]
-        let response = get_response( &format!("{}?{}", &self.url, &self.query), &self.head )?;
+        let response = http_request( &format!("{}?{}", &self.url, &self.query), &self.head )?;
     
         Ok(response)
     }
